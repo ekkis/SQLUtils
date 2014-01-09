@@ -32,8 +32,8 @@ as
 			if left(@s, @i - 1) != ''
 				insert @ret
 				select ltrim(rtrim(left(@s, @i - 1)))
-			select  @s = substring(@s, @i + 1, len(@s))
-			select  @i = 0
+			set @s = substring(@s, @i + 1, len(@s))
+			set @i = 0
 			end
 		end
 
